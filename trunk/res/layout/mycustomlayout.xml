@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:layout_gravity="center_horizontal|top"
+    android:id="@+id/toplayoutid"
+     >
+
+   <LinearLayout android:id="@+id/newheaderid" 
+        android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#C3C3C3"
+	    android:layout_gravity="center_horizontal|top"
+	    android:padding="10dp"
+	    android:layout_alignParentTop="true"
+		>
+		<View android:layout_width="0dp" android:layout_height="1dp" 
+     		android:layout_weight="1"/>
+		<ImageButton android:id="@+id/ibBack"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:contentDescription="Back"
+		    android:background="@drawable/back_reader"
+		    android:onClick="makeabackevent"/>
+		<View android:layout_width="0dp" android:layout_height="1dp" 
+     		android:layout_weight="1"/>
+		<ImageButton android:id="@+id/mainmenu_outline"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:contentDescription="Toc"
+		    android:background="@drawable/toc"
+		    android:onClick="myhandler1"
+		    />
+		<View android:layout_width="0dp" android:layout_height="1dp" 
+     		android:layout_weight="1"/>
+		<ImageButton android:id="@+id/mainmenu_bookmark"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:contentDescription="Bookmark"
+		    android:background="@drawable/bookmark"
+		    android:onClick="myhandler1"
+		    />
+		<!-- 
+		<View android:layout_width="0dp" android:layout_height="1dp" 
+     		android:layout_weight="1"/>
+		<ImageButton android:id="@+id/mainmenu_zoom"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:contentDescription="Zoomin"
+		    android:background="@drawable/increasefont"
+		    android:onClick="myhandler1"/>
+		-->
+		<View android:layout_width="0dp" android:layout_height="1dp" 
+     		android:layout_weight="1"/>
+		<ImageButton android:id="@+id/mainmenu_nightmode"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:contentDescription="Daymode"
+		    android:tag="plainnight"
+		    android:background="@drawable/nightmode"
+		    android:onClick="myhandler1"/>
+		<View android:layout_width="0dp" android:layout_height="1dp" 
+     		android:layout_weight="1"/>
+		<ImageButton android:id="@+id/mainmenu_search"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:contentDescription="Search"
+		    android:background="@drawable/magnifyingglass"
+		    android:onClick="myhandler1"/>
+		<View android:layout_width="0dp" android:layout_height="1dp" 
+     		android:layout_weight="1"/>
+		<ImageButton android:id="@+id/mainmenu_goto_page"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:contentDescription="Zoomout"
+		    android:background="@drawable/showbookmarks"
+		    android:onClick="myhandler1"/>
+		<View android:layout_width="0dp" android:layout_height="1dp" 
+     		android:layout_weight="1"/>
+		
+	</LinearLayout>
+	
+   
+   <LinearLayout android:id="@+id/seekbar" 
+        android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:paddingLeft="0dip"
+		android:paddingRight="0dip"
+		android:gravity="center_vertical"
+		android:weightSum="1.0"
+		android:background="#C3C3C3"
+		android:layout_alignParentBottom="true"
+		android:paddingBottom="8dp"
+		>
+		
+       <TextView
+	    	android:id="@+id/pagenumbercustomlabel"
+	    	android:paddingTop="0dp"
+	 		android:paddingBottom="0dp"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:textSize="13dp"
+	 		android:textStyle="bold"
+	 		android:typeface="serif"
+	 		android:textColor="#0000FF"
+	 		android:gravity="center_horizontal"
+	 		android:layout_gravity="center_horizontal|top"
+		    android:text="" android:layout_above="@+id/navigation_slider"/>
+		
+	   <SeekBar
+			android:id="@+id/navigation_slider"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:paddingTop="4dp"
+			android:paddingLeft="15dip"
+			android:paddingRight="15dip"
+			android:layout_weight="1.0"
+			android:progressDrawable="@drawable/scrubber_progress_horizontal_holo_light"
+			android:thumb="@drawable/scrubber_control_selector_holo_light"
+		/>
+	</LinearLayout>
+</RelativeLayout>
