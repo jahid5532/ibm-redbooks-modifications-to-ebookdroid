@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="top"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:background="#C3C3C3"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/search_controls_next"
+        android:layout_width="43dp"
+        android:layout_height="46dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/components_search_background"
+        android:src="@drawable/components_search_forward" />
+
+    <ImageButton
+        android:id="@+id/search_controls_prev"
+        android:layout_width="43dp"
+        android:layout_height="46dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/search_controls_next"
+        android:background="@drawable/components_search_background"
+        android:src="@drawable/components_search_backward" />
+
+    
+    <FrameLayout
+    android:id="@+id/search_controls_edit_fl"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignBottom="@id/search_controls_prev"
+    android:layout_alignTop="@id/search_controls_prev"
+    android:layout_toLeftOf="@id/search_controls_prev"
+    android:padding="1dp">
+    <EditText
+        android:id="@+id/search_controls_edit"
+        android:layout_marginLeft="4dp"
+ 	    android:layout_marginRight="8dp"
+ 	    android:layout_width="fill_parent"
+ 	    android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:gravity="left|center_vertical"
+        android:background="@drawable/components_search_background"
+        android:singleLine="true"
+        android:textColorHint="#000000"
+        android:textColor="#000000"
+        android:paddingLeft="13dp"
+        android:paddingRight="0dp"
+        android:imeOptions="actionSearch"
+        android:hint="Search within publication"
+        />
+    	<ImageButton
+        android:id="@+id/calc_clear_txt_Prise"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="right|center_vertical"
+        android:visibility="gone"
+        android:background="@drawable/blank" />
+    	</FrameLayout>
+    	<!-- android:textColor="@color/actionbar_white"  -->
+
+</RelativeLayout>
